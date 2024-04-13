@@ -1,0 +1,339 @@
+<!DOCTYPE html>
+<html lang="en">
+    
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Coffee House</title>
+    <link rel="stylesheet" href="CSS/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+    <script src="cart.javascript"></script>
+    
+</head>
+<body>
+    <div id="main">
+        <div class="cart-icon">
+            <p><i class="fa-solid fa-cart-plus"></i><span>0</span><sup></sup></p>    
+        </div>
+        
+        <div class="containerfull padd20">
+            <div class="container2 ">
+                <div class="box3">154 cửa hàng khắp cả nước</div>
+                <div class="box3">Hotline: 1800 6936</div>
+                <div class="box3">Freeship từ 50.000 đ</div>
+            </div>
+        </div>
+        <div class="header-nav">
+            <a href="#" class="header-nav_logo" title="The Coffee House">
+                <img src="data:image/png;base64,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" alt="logo">
+            </a>
+    
+                <ul class="header-nav_list">
+                <li><a href="./nav_coffee.html" title ="Cà phê">Cà phê</a></li>
+                <li><a href="#" title ="Trà">Trà</a></li>
+                <li class="header-nav_menu">
+                    <a href="./menu_all.html" title ="Menu">Menu</a>
+                    <i class="header-nav_icon fa-solid fa-v"></i>
+                    <ul class="header-nav_menu-list">
+                    <li>
+                        <a href="./menu_all.html" title ="Tất Cả">Tất Cả</a>
+                    </li>
+                    <li>
+                        <a href="#" title ="Xuân Lên Đi">Xuân Lên Đi</a>
+                        <a href="#" title ="Xuân Lên Đi">Xuân Lên Đi</a>
+                    </li>
+                    <li>
+                        <a href="#" title ="Cà Phê">Cà Phê</a>
+                        <a href="#" title ="Cà Phê Highlight">Cà Phê Highlight</a>
+                        <a href="#" title ="Cà Phê Việt Nam">Cà Phê Việt Nam</a>
+                        <a href="#" title ="Cà Phê Máy">Cà Phê Máy</a>
+                        <a href="#" title ="Cold Brew">Cold Brew</a>
+                    </li>
+                    <li>
+                        <a href="#" title ="Trà">Trà</a>
+                        <a href="#" title ="Trà trái cây">Trà trái cây</a>
+                        <a href="#" title ="Trà sữa Macchiato">Trà sữa Macchiato</a>
+                    </li>
+                    <li>
+                        <a href="#" title ="Cloud">Cloud</a>
+                        <a href="#" title ="CloudFee">CloudFee</a>
+                        <a href="#" title ="CloudTea Mochi">CloudTea Mochi</a>
+                    </li>
+                    <li>
+                        <a href="#" title ="Hi-Tea Healthy">Hi-Tea Healthy</a>
+                        <a href="#" title ="Hi-Tea Trà">Hi-Tea Trà</a>
+                        <a href="#" title ="Hi-Tea Đá Tuyết">Hi-Tea Đá Tuyết</a>
+                    </li>
+                    <li>
+                        <a href="#" title ="Trà Xanh - Chocolate">Trà Xanh - Chocolate</a>
+                        <a href="#" title ="Trà Xanh Tây Bắc">Trà Xanh Tây Bắc<a>
+                        <a href="#" title ="Chocolate">Chocolate</a>
+                    </li>
+                    <li>
+                        <a href="#" title ="Thức uống đá xay">Thức uống đá xay</a>
+                        <a href="#" title ="Đá xay Frosty">Đá xay Frosty</a>
+                    </li>
+                    <li>
+                        <a href="#" title ="Bánh & Snack">Bánh & Snack</a>
+                        <a href="#" title ="Bánh mặn">Bánh mặn</a>
+                        <a href="#" title ="Bánh ngọt">Bánh ngọt</a>
+                        <a href="#" title ="Snack">Snack</a>
+                        <a href="#" title ="Bánh Pastry">Bánh Pastry</a>
+                    </li>
+                    <li>
+                        <a href="#" title ="Thưởng Thức Tại Nhà">Thưởng Thức Tại Nhà</a>
+                        <a href="#" title ="Cà phê tại nhà">Cà phê tại nhà</a>
+                        <a href="#" title ="Cà Phê Hạt Rang">Cà Phê Hạt Rang</a>
+                        <a href="#" title ="Trà tại nhà">Trà tại nhà</a>
+                        <a href="#" title ="Chai Fresh Không Đá">Chai Fresh Không Đá</a>
+                    </li>
+                    </ul>
+                </li>
+                <li class="header-nav_house">
+                    <a href="#" title ="Chuyện nhà">Chuyện nhà</a>
+                    <i class="header-nav_icon fa-solid fa-v"></i>
+                    <ul class="header-nav_house-list">
+                    <li>
+                        <a href="#" title ="Coffeeholic">Coffeeholic</a>
+                        <a href="#" title ="#chuyencaphe">#chuyencaphe</a>
+                        <a href="#" title ="#phacaphe">#phacaphe</a>
+                    </li>
+                    <li>
+                        <a href="#" title ="Teaholic">Teaholic</a>
+                        <a href="#" title ="#phatra">#phatra</a>
+                        <a href="#" title ="#cauchuyenvetra">#cauchuyenvetra</a>
+                    </li>
+                    <li>
+                        <a href="#" title ="Blog">Blog</a>
+                        <a href="#" title ="#inthemood">#inthemood</a>
+                        <a href="#" title ="#Review">#Review</a>
+                        <a href="#" title ="#HumanofTCH">#HumanofTCH</a>
+                    </li>
+                    </ul>
+                </li>
+                <li><a href="#" title ="Cảm hứng CloudFee">Cảm hứng CloudFee</a></li>
+                <li><a href="#" title ="Cửa hàng">Cửa hàng</a></li>
+                <li><a href="#" title ="Tuyển dụng">Tuyển dụng</a></li>
+                </ul>
+            </div>
+
+
+        <div class="containerfull">
+            <img src="images/banner.webp" alt="">
+        </div>
+
+        <section class="containerfull">
+            <div class="container">
+                <div class="containerfull">
+                    <div class="box50 mr15">
+                        <img src="images/banner2.webp" alt="">
+                    </div>
+                    <div class="box25 mr15">
+                        <img src="images/sp1.webp" alt="">
+                        <div class="product-item-text">
+                            <p><span>120.000</span><sup></sup></p>
+                            <h1 style="font-weight: bold; font-size: 16px;">coffee1</h1>
+                        </div>
+                        <button>Thêm vào giỏ hàng</button>
+                    </div>
+                    <div class="box25">
+                        <img src="images/sp2.webp" alt="">
+                        <div class="product-item-text">
+                            <p><span>130.000</span><sup></sup></p>
+                            <h1 style="font-weight: bold; font-size: 16px;">coffee2</h1>
+                        </div>
+                        <button>Thêm vào giỏ hàng</button>
+                    </div>
+                </div>
+                <div class="containerfull mr30">
+                    <div class="box25 mr15"><img src="images/sp1.webp" alt="">
+                        <div class="product-item-text">
+                            <p><span>140.000</span><sup></sup></p>
+                            <h1 style="font-weight: bold; font-size: 16px;">coffee3</h1>
+                        </div>
+                        <button>Thêm vào giỏ hàng</button>
+                    </div>
+                    <div class="box25 mr15"><img src="images/sp2.webp" alt="">
+                        <div class="product-item-text">
+                            <p><span>150.000</span><sup></sup></p>
+                            <h1 style="font-weight: bold; font-size: 16px;">coffee4</h1>
+                        </div>
+                        <button>Thêm vào giỏ hàng</button>
+                    </div>
+                    <div class="box25 mr15"><img src="images/sp3.webp" alt="">
+                        <div class="product-item-text">
+                            <p><span>160.000</span><sup></sup></p>
+                            <h1 style="font-weight: bold; font-size: 16px;">coffee5</h1>
+                        </div>
+                        <button>Thêm vào giỏ hàng</button>
+                    </div>
+                    <div class="box25 mr15"><img src="images/sp4.webp" alt="">
+                        <div class="product-item-text">
+                            <p><span>170.000</span><sup></sup></p>
+                            <h1 style="font-weight: bold; font-size: 16px;">coffee6</h1>
+                        </div>
+                        <button>Thêm vào giỏ hàng</button>
+                    </div>
+                </div>
+
+            </div>
+        </section>
+        <section class="cart">
+            <i class="fa-solid fa-xmark"></i>
+            <h2>Cart</h2>
+            <form action="">
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Sản Phẩm</th>
+                            <th>Giá</th>
+                            <th>Số Lượng</th>
+
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <!-- <tr>
+                            <td style="display: flex;align-items: center;"><img style="width:200px" src="images/sp1.webp" alt="">sp1</td>
+                            <td><p><span>120.000</span><sup>đ</sup></p></td>
+                            <td><input style="width: 30px;outline: none" type="number" value="1" min="1"></td>
+                            <td style="cursor: pointer;">Xóa</td>
+                        </tr>
+                        <tr>
+                            <td style="display: flex;align-items: center;"><img style="width:200px" src="images/sp2.webp" alt="">sp1</td>
+                            <td><p><span>120.000</span><sup>đ</sup></p></td>
+                            <td><input style="width: 30px;outline: none" type="number" value="1" min="1"></td>
+                            <td style="cursor: pointer;">Xóa</td>
+                        </tr> -->
+                    </tbody>
+                </table>
+                <div style="text-align: left;" class="price-total">
+                    <p style="font-weight: bold;">Tổng Tiền:<span>0</span><sup>đ</sup></p>
+                </div>
+                <button>Mua!</button>
+            </form>
+        </section>
+        <script src="script.js"></script>
+        <section class="containerfull bg1 padd50">
+            <div class="container">
+                <div class="boxleft mr5pt">
+                    <img src="images/hinh1.webp" alt="">
+                </div>
+                <div class="boxright padd50">
+                    <img src="images/title.webp" alt="">
+                    <p>
+                        Bộ sưu tập “Cầu Toàn Kèo Thơm” không chỉ là thức uống chăm da giữ dáng, mà còn là “vía may mắn” để năm mới thêm trọn vẹn. Với nền trà tốt cho sức khoẻ cùng hương vị mãng cầu và thơm giúp giải ngấy, topping đầy đặn, “Cầu Toàn Kèo Thơm” mang ý nghĩa sung
+                        túc cho năm 2024. Chiếc ly mèo đáng yêu còn như một lời chúc may mắn Nhà gửi đến bạn.
+                    </p>
+                    <button1>Thử ngay</button1>
+                </div>
+            </div>
+
+        </section>
+        <section class="containerfull padd50">
+            <div class="boxleft_bgw mr5pt">
+                <div class="boxleft_bgw_left">
+                    <h2>TCH The Grand View</h2>
+                    <p>
+                        Bộ sưu tập “Cầu Toàn Kèo Thơm” không chỉ là thức uống chăm da giữ dáng, mà còn là “vía may mắn” để năm mới thêm trọn vẹn. Với nền trà tốt cho sức khoẻ cùng hương vị mãng cầu và thơm giúp giải ngấy, topping đầy đặn, “Cầu Toàn Kèo Thơm” mang ý nghĩa sung
+                        túc cho năm 2024.
+                    </p>
+                    <button1>Thử ngay</button1>
+                </div>
+            </div>
+            <div class="boxright_bgw">
+                <img src="images/banner2.webp" alt="">
+            </div>
+
+        </section>
+        <section class="containerfull bg1 padd50">
+            <div class="container">
+                <h3>Chuyện Nhà</h3>
+                <div class="row">
+                    <h2>Coffeeholic</h2>
+                </div>
+                <div class="row">
+                    <div class="boxnews mr2pt">
+                        <img src="images/hinh2.webp" alt="">
+                        <p>11/03/2022</p>
+                        <p><a href="#">CÁCH NHẬN BIẾT HƯƠNG VỊ CÀ PHÊ</a></p>
+                        <p>Cùng Arabica, Robusta cũng là loại cà phê nổi tiếng được sử dụng phổ biến ở Việt Nam và nhiều nước khác trên thế giới. Với nhiều đặc điểm riêng, không...</p>
+                    </div>
+                    <div class="boxnews mr2pt">
+                        <img src="images/hinh2.webp" alt="">
+                        <p>11/03/2022</p>
+                        <p><a href="#">CÁCH NHẬN BIẾT HƯƠNG VỊ CÀ PHÊ</a></p>
+                        <p>Cùng Arabica, Robusta cũng là loại cà phê nổi tiếng được sử dụng phổ biến ở Việt Nam và nhiều nước khác trên thế giới. Với nhiều đặc điểm riêng, không...</p>
+                    </div>
+                    <div class="boxnews">
+                        <img src="images/hinh2.webp" alt="">
+                        <p>11/03/2022</p>
+                        <p><a href="#">CÁCH NHẬN BIẾT HƯƠNG VỊ CÀ PHÊ</a></p>
+                        <p>Cùng Arabica, Robusta cũng là loại cà phê nổi tiếng được sử dụng phổ biến ở Việt Nam và nhiều nước khác trên thế giới. Với nhiều đặc điểm riêng, không...</p>
+                    </div>
+                </div>
+                <div class="row">
+                    <h2>Coffeeholic</h2>
+                </div>
+                <div class="row">
+                    <div class="boxnews mr2pt">
+                        <img src="images/hinh2.webp" alt="">
+                        <p>11/03/2022</p>
+                        <p><a href="#">CÁCH NHẬN BIẾT HƯƠNG VỊ CÀ PHÊ</a></p>
+                        <p>Cùng Arabica, Robusta cũng là loại cà phê nổi tiếng được sử dụng phổ biến ở Việt Nam và nhiều nước khác trên thế giới. Với nhiều đặc điểm riêng, không...</p>
+                    </div>
+                    <div class="boxnews mr2pt">
+                        <img src="images/hinh2.webp" alt="">
+                        <p>11/03/2022</p>
+                        <p><a href="#">CÁCH NHẬN BIẾT HƯƠNG VỊ CÀ PHÊ</a></p>
+                        <p>Cùng Arabica, Robusta cũng là loại cà phê nổi tiếng được sử dụng phổ biến ở Việt Nam và nhiều nước khác trên thế giới. Với nhiều đặc điểm riêng, không...</p>
+                    </div>
+                    <div class="boxnews">
+                        <img src="images/hinh2.webp" alt="">
+                        <p>11/03/2022</p>
+                        <p><a href="#">CÁCH NHẬN BIẾT HƯƠNG VỊ CÀ PHÊ</a></p>
+                        <p>Cùng Arabica, Robusta cũng là loại cà phê nổi tiếng được sử dụng phổ biến ở Việt Nam và nhiều nước khác trên thế giới. Với nhiều đặc điểm riêng, không...</p>
+                    </div>
+                </div>
+                <div class="row">
+                    <h2>Coffeeholic</h2>
+                </div>
+                <div class="row">
+                    <div class="boxnews mr2pt">
+                        <img src="images/hinh2.webp" alt="">
+                        <p>11/03/2022</p>
+                        <p><a href="#">CÁCH NHẬN BIẾT HƯƠNG VỊ CÀ PHÊ</a></p>
+                        <p>Cùng Arabica, Robusta cũng là loại cà phê nổi tiếng được sử dụng phổ biến ở Việt Nam và nhiều nước khác trên thế giới. Với nhiều đặc điểm riêng, không...</p>
+                    </div>
+                    <div class="boxnews mr2pt">
+                        <img src="images/hinh2.webp" alt="">
+                        <p>11/03/2022</p>
+                        <p><a href="#">CÁCH NHẬN BIẾT HƯƠNG VỊ CÀ PHÊ</a></p>
+                        <p>Cùng Arabica, Robusta cũng là loại cà phê nổi tiếng được sử dụng phổ biến ở Việt Nam và nhiều nước khác trên thế giới. Với nhiều đặc điểm riêng, không...</p>
+                    </div>
+                    <div class="boxnews">
+                        <img src="images/hinh2.webp" alt="">
+                        <p>11/03/2022</p>
+                        <p><a href="#">CÁCH NHẬN BIẾT HƯƠNG VỊ CÀ PHÊ</a></p>
+                        <p>Cùng Arabica, Robusta cũng là loại cà phê nổi tiếng được sử dụng phổ biến ở Việt Nam và nhiều nước khác trên thế giới. Với nhiều đặc điểm riêng, không...</p>
+                    </div>
+                </div>
+            </div>
+        
+            
+        </section>
+        <section class="containerfull padd50">
+
+        </section>
+    </div>
+    <footer>
+
+    </footer>
+   
+   
+
+</script>
+
+</body>
+
+</html>
